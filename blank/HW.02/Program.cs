@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace HW._02
 {
@@ -6,16 +7,18 @@ namespace HW._02
     {
         static void Main(string[] args)
         {
-            //1.опишем типы данных
-            //2.
-            //3.
-            //4.
-            //5.
-            //6.
-            string textReaderResult = textReader.ReadToEnd();
-            byte binary = Convert.ToByte(Array0fTextResult[i],2);
-            byte[] imageBytes = new byte[array0fTextResult.Length - 1];
-            File.WriteAllBytes(@"C:\Temp\image.png", imageBytes);
+            //1.считываем тект из файла image.txt
+            //2.задаем строчный тип данных для считанных данных
+            //3.задаем строчный тип массиву и присваиваем массиву считанные ранее данные
+            //4.очистка объекта (освобождение неуправляемых ресурсов) 
+            //5.задаем тип данных byte для массива
+            //6.описываем цикл, считываются данные из массива
+            //7.конвертируем данные из массива в эквивалентные 8-разрядные целые числа
+            //8.записываем получившуюся картинку в папку
+            //все работало)
+
+            
+
         }
     }
 }
