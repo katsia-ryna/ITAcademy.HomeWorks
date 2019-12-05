@@ -17,7 +17,19 @@ namespace HW._02
             //8.записываем получившуюся картинку в папку
             //все работало)
 
-            
+            StreamReader textReader = new StreamReader(@"C:\Windows\Temp\image.txt", true);
+            string textReaderResult = textReader.ReadToEnd();
+            string[] arrayOFTextResult = textReaderResult.Split(' ');
+            textReader.Dispose();
+            byte[] imageBytes = new byte[arrayOFTextResult.Length - 1];
+
+            for (int i = 0; i < arrayOFTextResult.Length - 1; i++)
+            {
+                byte binary = Convert.ToByte(arrayOFTextResult[i], 2);
+                imageBytes[i] = binary;
+
+            }
+            File.WriteAllBytes(@"C:\Windows\Temp\image.png", imageBytes);
 
         }
     }
