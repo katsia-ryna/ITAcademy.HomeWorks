@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace HW04.Task2
 {
@@ -9,7 +10,6 @@ namespace HW04.Task2
             Console.WriteLine("Введите один из символ W, S, A, D");
             char ch;
             ch =(char) Console.Read();
-            object obj = 12;
             if (ch == 'w')
             {
                 Console.WriteLine("Переместить фигуру вверх");
