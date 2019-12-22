@@ -32,24 +32,6 @@ namespace HW06.Task2
             {
                 Console.WriteLine($" Массив: {array1[i]}");
             }
-           /* for (i = 0; i < array1.Length; i++)
-            {
-                if (i < k)
-                {
-                    Console.WriteLine(array1[i]);
-                }
-                
-                if (i == k)
-                {
-                    Console.WriteLine(array1[k]);
-                    
-                }
-                if (i >= k)
-                {
-                    array1[i] = array1[i + 1];
-                    Console.WriteLine(array1[i]);
-                }
-            }*/
             Console.ReadKey();
         }
     }
