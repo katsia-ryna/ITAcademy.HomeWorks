@@ -7,13 +7,13 @@ namespace HW06.Task3
     {
         static void Main(string[] args)
         {
-            Int64[] array1 = new Int64[10];
+            Int64[] array1 = new Int64[100000000];
             Random rand = new Random();
             int i;
             for(i=0; i < array1.Length; i++)
             {
                 array1[i] = rand.Next(-100, 100);
-                Console.WriteLine($"{i}й элемент массива:{array1[i]}");
+               // Console.WriteLine($"{i}й элемент массива:{array1[i]}");
             }
 
             Console.WriteLine("Вывод обратного массива:");
@@ -21,7 +21,7 @@ namespace HW06.Task3
             count.Start();
             for (i = array1.Length-1; i >= 0; i--)
             {
-                Console.WriteLine(array1[i]);
+               // Console.WriteLine(array1[i]);
             }
             count.Stop();
             long timeCount = count.ElapsedMilliseconds;
@@ -33,7 +33,7 @@ namespace HW06.Task3
             Int64[] array2 = array1;
             Console.WriteLine("Вывод массива методом Reverse:");
             foreach(var element in array2)
-            Console.WriteLine(element);
+            //Console.WriteLine(element);
             count.Stop();
             timeCount = count.ElapsedMilliseconds;
             Console.WriteLine($"Время выполнения массива методом Reverse: {timeCount}");
