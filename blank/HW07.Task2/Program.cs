@@ -73,6 +73,24 @@ namespace HW07.Task2
             int countPunctuation = text.Count(char.IsPunctuation);
             Console.WriteLine($" Количество знаков пунктуации: {countPunctuation}");
 
+            string temp;
+            for (int i = 0; i < array1.Length - 1; i++)
+            {
+                for (int j = i + 1; j < array1.Length; j++)
+                {
+                    if (array1[i].Length < array1[j].Length)
+                    {
+                        temp = array1[i];
+                        array1[i] = array1[j];
+                        array1[j] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Вывод отсортированного массива");
+            for (int i = 0; i < array1.Length; i++)
+            {
+                Console.WriteLine(array1[i]);
+            }
             Console.ReadKey();
         }
     }
