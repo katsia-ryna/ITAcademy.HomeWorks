@@ -8,7 +8,7 @@ namespace HW09.Task1
     {
         public const string nameAirport = "Minsk International Airport";
         string nameVisitor;
-        string passportNumber;
+        public string passportNumber { get; set;}
 
         public void PrintVisitorInformation()
         {

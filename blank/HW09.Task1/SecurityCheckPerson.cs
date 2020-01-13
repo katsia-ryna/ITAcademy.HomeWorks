@@ -10,14 +10,15 @@ namespace HW09.Task1
         public void VisitorSecurityCheck()
         {
             Console.WriteLine("Please show me your hand baggage.");
-            Console.WriteLine("Have you");
+            Console.WriteLine("Have you any prohibited items?");
+            _answer = Console.ReadLine();
             if (_answer=="no")
             {
-                Console.WriteLine("");
+                Console.WriteLine("Ok, Let's scan your bag");
             }
             else
             {
-                Console.WriteLine("");
+                Console.WriteLine("You have to undergo a search.");
             }
             Console.WriteLine("Proceed to the passport control, please.");
         }

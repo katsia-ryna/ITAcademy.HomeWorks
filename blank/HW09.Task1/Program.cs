@@ -8,8 +8,9 @@ namespace HW09.Task1
         {
             VisitorInformation visitor = new VisitorInformation();
             visitor.PrintVisitorInformation();
-            Console.WriteLine();
-
+            string passport = visitor.passportNumber;
+            Console.WriteLine(passport);
+            
             CheckIn checkIn = new CheckIn();
             checkIn.VisitorCheckIn();
             Console.WriteLine();
@@ -19,7 +20,7 @@ namespace HW09.Task1
             Console.WriteLine();
 
             PassportContolPerson passportContol = new PassportContolPerson();
-            passportContol.VisitorsPassportControl();
+            passportContol.VisitorsPassportControl("passenger","passport","visa");
             Console.ReadLine();
         }
     }
