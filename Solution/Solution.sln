@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw_01_assets", "hw_01_assets", "{34A4D9EA-913F-42F1-8333-FCD8D478B713}"
+	ProjectSection(SolutionItems) = preProject
+		hw_01_assets\Diagram.jpg = hw_01_assets\Diagram.jpg
+		hw_01_assets\hw_01.pdf = hw_01_assets\hw_01.pdf
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {031D50DA-38D9-4828-85DF-F3CB6903A836}
+	EndGlobalSection
+EndGlobal
