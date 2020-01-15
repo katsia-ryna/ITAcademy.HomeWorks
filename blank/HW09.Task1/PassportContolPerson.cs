@@ -6,17 +6,28 @@ namespace HW09.Task1
 {
     class PassportContolPerson
     {
-        string country;
-        string purpose;
+        string _country;
+        string _purpose;
         public void VisitorsPassportControl(string person, string passport, string visa)
         {
             Console.WriteLine($"Please show me your {passport}");
             Console.WriteLine($"Identity check on {person}");
             Console.WriteLine("Where are you going?");
-            country = Console.ReadLine();
-            Console.WriteLine($"Check {visa} of the country {country}");
+            _country = Console.ReadLine();
+            Console.WriteLine($"Check {visa} of the country {_country}");
             Console.WriteLine("What is the purpose of your trip?");
-            purpose = Console.ReadLine();
+            _purpose = Console.ReadLine();
+            Console.WriteLine("All right, you can go.");
+        }
+
+        public void VisitorsPassportControl(string person, string passport)
+        {
+            Console.WriteLine($"Please show me your {passport}");
+            Console.WriteLine($"Identity check on {person}");
+            Console.WriteLine("Where are you going?");
+            _country = Console.ReadLine();     
+            Console.WriteLine("What is the purpose of your trip?");
+            _purpose = Console.ReadLine();
             Console.WriteLine("All right, you can go.");
         }
     }

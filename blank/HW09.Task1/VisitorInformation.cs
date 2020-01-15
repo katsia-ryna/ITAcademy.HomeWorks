@@ -6,19 +6,27 @@ namespace HW09.Task1
 {
     class VisitorInformation
     {
-        public const string nameAirport = "Minsk International Airport";
-        string nameVisitor;
-        public string passportNumber { get; set;}
+        public const string NameAirport = "Minsk International Airport";
+        string _nameVisitor;
+        string _passportNumber;
 
+        public string NameVisitor
+        {
+            get { return _nameVisitor; }
+        }
+        public string PassportNumber
+        {
+            get { return _passportNumber; }
+        }
         public void PrintVisitorInformation()
         {
             Console.WriteLine("Good day!");
-            Console.WriteLine($"Welcome to {nameAirport}");
+            Console.WriteLine($"Welcome to {NameAirport}");
             Console.WriteLine("Introduce yourselves, please. (Full name):");
-            nameVisitor = Console.ReadLine();
+            _nameVisitor = Console.ReadLine();
             Console.WriteLine("Enter the passport number");
-            passportNumber = Console.ReadLine();
-            Console.WriteLine($"{nameVisitor}, proceed to the check-in counters, please.");
-        }
+            _passportNumber = Console.ReadLine();
+            Console.WriteLine($"{_nameVisitor}, proceed to the check-in counters, please.");
+        }   
     }
 }

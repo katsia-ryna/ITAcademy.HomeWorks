@@ -8,19 +8,31 @@ namespace HW09.Task1
         {
             VisitorInformation visitor = new VisitorInformation();
             visitor.PrintVisitorInformation();
-            string passport = visitor.passportNumber;
-            Console.WriteLine(passport);
+            Console.WriteLine($"{visitor.NameVisitor}"); 
+            Console.WriteLine($"{visitor.PassportNumber}");
             
             CheckIn checkIn = new CheckIn();
             checkIn.VisitorCheckIn();
+            Console.WriteLine("Enter weight of your laggage: ");
+            sbyte laggage = sbyte.Parse(Console.ReadLine());
+            checkIn.Laggage = laggage;
             Console.WriteLine();
 
-            SecurityCheckPerson securityCheck = new SecurityCheckPerson();
+            SecurityCheckPerson securityCheck = new SecurityCheckPerson("backpack", "tourism");
             securityCheck.VisitorSecurityCheck();
             Console.WriteLine();
 
             PassportContolPerson passportContol = new PassportContolPerson();
-            passportContol.VisitorsPassportControl("passenger","passport","visa");
+            Console.WriteLine("Does the passenger need a visa? (yes/no)");
+            string answer = Console.ReadLine();
+            if (answer=="yes")
+            {
+                passportContol.VisitorsPassportControl("passenger", "passport", "visa");
+            }
+            else
+            {
+                passportContol.VisitorsPassportControl("passenger", "passport");
+            }
             Console.ReadLine();
         }
     }

@@ -8,6 +8,27 @@ namespace HW09.Task1
     {
         string _answer;
         string _luggage;
+        int _weight;
+
+        public int Laggage
+        {
+            get
+            {
+                return _weight;
+            }
+            set
+            {
+                if (value > 20) 
+                {
+                    Console.WriteLine("You should pay for excess baggage.");
+                }
+                else
+                {
+                    _weight = value;
+                    Console.WriteLine("All right, your laggage is checked.");
+                }
+            }
+        }
         public void VisitorCheckIn()
         {
             Console.WriteLine("Have you already registered online? (yes/no)");
@@ -25,7 +46,6 @@ namespace HW09.Task1
             if (_luggage=="yes")
             {
                 Console.WriteLine("You shoul weight your luggage and hand-in your luggage.");
-                Console.WriteLine("Proceed to the security check, please.");
             }
             else
             {
