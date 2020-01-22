@@ -8,32 +8,19 @@ namespace HW11.Task1
     {
         private byte _a;
         private string _name;
-        private string _type;
         public byte FigureSquare
         {
             get { return _a; }
-            set
-            {
-                if (value > 1 & value < 10)
-                {
-                    _a = value;
-                }
-                else
-                    Console.WriteLine("Enter a number from 1 to 10 ");
-            }
         }
         public string SquareName { get { return _name; } }
-        public string SquareType { get { return _type; } }
-        public Square(string name, string type, byte a)
+        public Square(string name, byte a)
         {
             _name = name;
-            _type = type;
             _a = a;
         }
-        public override void FigureArea()
+        public override double FigureArea()
         {
-            base.FigureArea();
-            Console.WriteLine($"{_a*_a}");
+            return _a * _a;
         }
     }
 }

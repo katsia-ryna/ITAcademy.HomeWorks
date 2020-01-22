@@ -6,21 +6,27 @@ namespace HW11.Task1
     {
         static void Main(string[] args)
         {
-            //Random rand = new Random();
-            //int num1 = rand.Next(1, 10);
-            //Console.WriteLine("Enter parametr:");
+            GeometryFigures[] shape = new GeometryFigures[3];
+            shape[0] = new Circle("circle", 4);
+            shape[1] = new Square("square", 8);
+            shape[2] = new Triangle("triangle", 2, 3);
+            for (byte i = 1; i <= 10; i++)
+            {
+                shape[0] = new Circle("circle"+i, i);
+                shape[1] = new Square("square"+i, i);
+                shape[2] = new Triangle("triangle"+i, i, i);
 
-            GeometryFigures shape = new GeometryFigures();
-            Circle circle = new Circle("figure-circle", "circle", 4);
-            circle.FigureArea();
-
-            Square square = new Square("figure-square", "square", 8);
-            square.FigureArea();
-
-            Triangle triangle = new Triangle("figure-triangle", "triangle", 2,3);
-            triangle.FigureArea();
+                PrintFigure(shape);
+            }
 
             Console.ReadLine();
+        }
+        public static void PrintFigure(GeometryFigures[] shape)
+        {
+            foreach (var item in shape)
+            {
+                Console.WriteLine($"This is {item}. CLR Type is {item}. Square is {item.FigureArea()}.");
+            }
         }
     }
 }

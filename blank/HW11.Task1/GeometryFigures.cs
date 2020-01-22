@@ -8,10 +8,9 @@ namespace HW11.Task1
     {
         protected const float pi = 3.14159f;
        
-        public virtual void FigureArea()
+        public virtual double FigureArea()
         {
-            Console.WriteLine("Square figure is: ");
-
+            return 1;
         }
     }
 }
