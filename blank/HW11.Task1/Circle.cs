@@ -7,15 +7,10 @@ namespace HW11.Task1
     class Circle:GeometryFigures
     {
         private byte _radius;
-        private string _name;
-        public byte FigureCircle 
+       
+        public Circle(string name, byte radius):base (name)
         {
-            get { return _radius; }
-        }
-        public string CircleName { get { return _name; } }
-        public Circle(string name, byte radius)
-        {
-            _name = name;
+            Name = name;
             _radius = radius;
         }
         public override double FigureArea()

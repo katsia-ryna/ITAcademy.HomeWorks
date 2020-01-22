@@ -7,15 +7,10 @@ namespace HW11.Task1
     class Square:GeometryFigures
     {
         private byte _a;
-        private string _name;
-        public byte FigureSquare
+        
+        public Square(string name, byte a) : base(name)
         {
-            get { return _a; }
-        }
-        public string SquareName { get { return _name; } }
-        public Square(string name, byte a)
-        {
-            _name = name;
+            Name = name;
             _a = a;
         }
         public override double FigureArea()
