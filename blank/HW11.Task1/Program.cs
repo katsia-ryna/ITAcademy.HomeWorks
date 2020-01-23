@@ -18,9 +18,9 @@ namespace HW11.Task1
                 shape[2] = new Triangle("triangle"+i, i, i);
 
                 Console.WriteLine();
+                Logger.Log.Info("The process of outputing data has begun! ");
                 PrintFigure(shape);
             }
-            
             Console.ReadLine();
             Logger.Log.Info("PROGRAMM_COMPLETED_SUCCESSFULLY");
         }
@@ -28,6 +28,7 @@ namespace HW11.Task1
         {
             foreach (GeometryFigures item in shape)
             {
+                Logger.Log.Info("The figure is created:");
                 Console.WriteLine($"This is {item.Name}. CLR Type is {item}. Square is {item.FigureArea()}.");
             }
         }

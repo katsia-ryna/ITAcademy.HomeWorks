@@ -15,4 +15,10 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Log.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

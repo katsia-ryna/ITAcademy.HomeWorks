@@ -14,7 +14,7 @@ namespace HW11.Task1
         public static void InitLogger()
         {
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-            XmlConfigurator.Configure(logRepository, new FileInfo("App1.config"));
+            XmlConfigurator.Configure(logRepository, new FileInfo("Log.config"));
         }
     }
 }
