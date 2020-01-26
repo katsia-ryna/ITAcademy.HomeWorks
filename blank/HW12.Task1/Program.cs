@@ -6,6 +6,8 @@ namespace HW12.Task1
     {
         static void Main(string[] args)
         {
+            Logger.InitLogger();
+            Logger.Log.Info("GetMotorcycleByID");
             MotorcycleRepository repository = new MotorcycleRepository();
 
             Console.WriteLine("GetMotorcycleById from repository");
