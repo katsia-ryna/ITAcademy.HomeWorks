@@ -8,7 +8,11 @@ namespace HW12.Task1
         {
             MotorcycleRepository repository = new MotorcycleRepository();
 
-            repository.GetMotorcycleById(2);
+            Console.WriteLine("GetMotorcycleById from repository");
+            var moto = repository.GetMotorcycleById(2);
+            Print(moto);
+
+            Console.WriteLine();
             repository.GetMotorcycles();
             repository.CreateMotorcycle(new Motorcycle()
             {
@@ -29,6 +33,13 @@ namespace HW12.Task1
             repository.DeleteMotorcycle(3);
 
             Console.ReadLine();
+         
+        }
+        static void Print(Motorcycle motorcycle)
+        {
+            Console.WriteLine($" id = {motorcycle.Id}, name={motorcycle.Name}, model= {motorcycle.Model}, " +
+                $"year= {motorcycle.Year}");
+  
         }
     }
 }
