@@ -41,9 +41,9 @@ namespace HW12.Task1
 
         public Motorcycle GetMotorcycleById(int id)
         {
-            //Console.WriteLine(motorcycle);
             return _list.FirstOrDefault(x=>x.Id==id);
         }
+
         public void GetMotorcycles()
         {
             foreach (var motorcycle in _list)
@@ -52,6 +52,7 @@ namespace HW12.Task1
                     $" {motorcycle.Odometer}");
             }
         }
+
         public void CreateMotorcycle(Motorcycle motorcycle)
         {
             _list.Add(motorcycle);
