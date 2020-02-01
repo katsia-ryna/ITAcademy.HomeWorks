@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 
 namespace Project.Bike_Components
 {
@@ -14,6 +15,12 @@ namespace Project.Bike_Components
     {
         static void Main(string[] args)
         {
+            Logger.InitLogger();
+            Logger.Log.Info(string.Concat("START_PROGRAMM:NAME " + Assembly.GetExecutingAssembly().GetName().Name 
+                + ", NAMESPACE " + Assembly.GetExecutingAssembly().EntryPoint.DeclaringType.Namespace));
+            Logger.Log.Debug("");
+            Logger.Log.Error("");
+
             Customer customer = new Customer();
             customer.PrintCustomerInfo();
 
@@ -62,6 +69,7 @@ namespace Project.Bike_Components
             //TwentySixSize=26,
             //TwentySevenSize = 27.5,
 
+            Logger.Log.Info("PROGRAMM_COMPLETED_SUCCESSFULLY");
             Console.ReadLine();
         }
     }
