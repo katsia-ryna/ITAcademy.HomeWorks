@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using Newtonsoft.Json;
 
 namespace Project.Bike_Components
 {
@@ -11,6 +12,21 @@ namespace Project.Bike_Components
         Large=20,
         XLarge=22
     }
+
+    struct WheelSize
+    {
+        public float wheel1;
+        
+        public void PrintWheelSize()
+        {
+            Console.WriteLine($"You should choose a bike whith a wheel size of {wheel1}\"");
+        }
+        public void PrintTwoWheelSizes()
+        {
+            Console.WriteLine($"You should choose a bike whith a wheel size of {wheel1}\" or 28\"");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -48,26 +64,78 @@ namespace Project.Bike_Components
                     KidsBike kidsBike = new KidsBike();
                     kidsBike.PrintBikeInfo();
                 }
+
+                Console.WriteLine("We'll help you choose a bike according to your parameters");
+                Console.WriteLine("Enter your height:");
+                float height = Convert.ToSingle(Console.ReadLine());
+                WheelSize wheelSize;
+
+                if (height >= 120f & height <= 157f)
+                {
+                    FrameSize frameSize = FrameSize.XSmall;
+                    Console.WriteLine($"You should choose a frame size of {(int)frameSize}\" or {(int)frameSize+1}\"");
+                    wheelSize.wheel1 = 24f;
+                    wheelSize.PrintWheelSize();
+                }
+                if (height >= 158f & height <= 168f)
+                {
+                    FrameSize frameSize = FrameSize.Small;
+                    Console.WriteLine($"You should choose a frame size of {(int)frameSize-1}\" or {(int)frameSize}\"");
+                    wheelSize.wheel1 = 26;
+                    wheelSize.PrintWheelSize();
+                }
+                if (height >= 169f & height <= 178f)
+                {
+                    FrameSize frameSize = FrameSize.Medium;
+                    Console.WriteLine($"You should choose a frame size of {(int)frameSize-1}\" or {(int)frameSize}\"");
+                    wheelSize.wheel1 = 27.5f;
+                    wheelSize.PrintTwoWheelSizes();
+                }
+                if (height >= 179f & height <= 188f)
+                {
+                    FrameSize frameSize = FrameSize.Large;
+                    Console.WriteLine($"You should choose a frame size of {(int)frameSize-1}\" or {(int)frameSize}\"");
+                    wheelSize.wheel1 = 29;
+                    wheelSize.PrintWheelSize();
+                }
+                if (height >= 189f & height <= 225f)
+                {
+                    FrameSize frameSize = FrameSize.XLarge;
+                    Console.WriteLine($"You should choose a frame size of {(int)frameSize - 1}\" or {(int)frameSize}\"");
+                    wheelSize.wheel1 = 29;
+                    wheelSize.PrintWheelSize();
+                }
+                try
+                {
+                    if (height > 225f)
+                    {
+                        throw new Exception("Sorry, but we don't have a bike to yours parameters.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                        Logger.Log.Error($"{ex.Message}");
+                        Console.WriteLine($"{ex.Message}");
+                }
             }
 
             if (customer.Item=="Parts")
             {
                 Parts parts = new Parts();
-                //parts.
+                parts.PrintThingsInfo();
             }
             if (customer.Item == "Accessories")
             {
                 Accessories accessories = new Accessories();
-                //accessories.
+                accessories.PrintThingsInfo();
             }
             if (customer.Item == "Clothes")
             {
                 Clothes clothes = new Clothes();
-                //clothes
+                clothes.PrintThingsInfo();
             }
 
-            //TwentySixSize=26,
-            //TwentySevenSize = 27.5,
+
 
             Logger.Log.Info("PROGRAMM_COMPLETED_SUCCESSFULLY");
             Console.ReadLine();

@@ -10,7 +10,7 @@ namespace Project.Bike_Components
 
         public override void PrintBikeInfo()
         {
-            base.PrintBikeInfo();
+            
         }
     }
 }

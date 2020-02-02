@@ -4,12 +4,8 @@ using System.Text;
 
 namespace Project.Bike_Components
 {
-    interface IBike
+    interface IThings
     {
-        
-        void PrintBikeInfo()
-        {
-            
-        }
+        void PrintThingsInfo();
     }
 }
