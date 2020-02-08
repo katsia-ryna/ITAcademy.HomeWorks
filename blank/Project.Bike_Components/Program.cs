@@ -37,34 +37,55 @@ namespace Project.Bike_Components
             Logger.Log.Debug("");
             Logger.Log.Error("");
 
+            
             Customer customer = new Customer();
+            Logger.Log.Debug("PrintCustomerInfo method call");
             customer.PrintCustomerInfo();
 
             if (customer.Item=="Bike" || customer.Item=="bike")
             {
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
+                Logger.Log.Debug("Bike class call");
                 Bike bike = new Bike();
                 bike.PrintBikeInfo();
                 if (bike.Type=="Mountain bike" || bike.Type == "mountain bike")
                 {
+                    Logger.Log.Debug("MountainBike class call");
                     MountainBike mountain = new MountainBike();
                     mountain.PrintBikeInfo();
                 }
                 if (bike.Type == "Road bike" || bike.Type=="road bike")
                 {
+                    Logger.Log.Debug("RoadBike class call");
                     RoadBike roadBike = new RoadBike();
                     roadBike.PrintBikeInfo();
                 }
                 if (bike.Type=="City bike" || bike.Type=="city bike")
                 {
+                    Logger.Log.Debug("CityBike class call");
                     CityBike cityBike = new CityBike();
                     cityBike.PrintBikeInfo();
                 }
                 if (bike.Type=="Kids bike" || bike.Type=="kids bike")
                 {
+                    Logger.Log.Debug("KidsBike class call");
                     KidsBike kidsBike = new KidsBike();
                     kidsBike.PrintBikeInfo();
                 }
 
+                Logger.Log.Debug(" ");
                 Console.WriteLine("We'll help you choose a bike according to your parameters");
                 Console.WriteLine("Enter your height:");
                 float height = Convert.ToSingle(Console.ReadLine());
