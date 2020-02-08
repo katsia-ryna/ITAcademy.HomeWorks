@@ -1,0 +1,22 @@
+{
+  "1": {
+    "name": "Scott",
+    "model": [ "Scale 970", "Scale 940", "Spark 950", "Genius 960", "Ransom 930" ]
+  },
+  "2": {
+    "name": "Santa",
+    "model": [ "Cruz Nowad 4CC", "Cruz Hightower", "Cruz Blur 3", "Cruz Tallboy" ]
+  },
+  "3": {
+    "name": "Focus",
+    "model": "Jam 6.8"
+  },
+  "4": {
+    "name": "Liteville",
+    "model": [ "301 MK15", "303 MK15" ]
+  },
+  "5": {
+    "name": "Yeti",
+    "model": [ "SB130", "SB140", "SB100" ]
+  }
+}
