@@ -12,7 +12,7 @@ namespace Project.Bike_Components
         public string Name { get; set; }
 
         [JsonProperty("model")]
-        public string Model { get; set; }
+        public string[] Model { get; set; }
 
         public override void PrintBikeInfo()
         {

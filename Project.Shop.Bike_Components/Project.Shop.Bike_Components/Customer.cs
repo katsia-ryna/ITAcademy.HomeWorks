@@ -18,8 +18,8 @@ namespace Project.Bike_Components
             Name = Console.ReadLine();
             Console.WriteLine($"Can I help you, {Name}?");
             Console.WriteLine("We can help you to choose a bike according to your parameters.");
-            Console.WriteLine($"Also, {Name}, you can choose Parts for your bike, Accessories or Clothing.");
-            Console.WriteLine("Please, choose one of the four items: /Bike / Parts for bike/ Accessories / Clothing/.");
+            Console.WriteLine($"Also, {Name}, you can choose Parts for your bike, Accessories.");
+            Console.WriteLine("Please, choose one of the four items: /Bike / Parts for bike/ Accessories /.");
             Item = Console.ReadLine();
         }
     }

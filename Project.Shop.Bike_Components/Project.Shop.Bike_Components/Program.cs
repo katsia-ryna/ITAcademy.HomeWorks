@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using Newtonsoft.Json;
+using MyLogger;
 
 
 namespace Project.Bike_Components
@@ -32,47 +33,51 @@ namespace Project.Bike_Components
     {
         static void Main()
         {
-            MyLogger.Log.Info("");
+            Log log = new Log();
+            LogDelegate logDelegate = Log.Info;
+            
+            
+            MyLogger.Log.Info("kkk");
             //Logger.InitLogger();
             //Logger.Log.Info(string.Concat("START_PROGRAMM:NAME " + Assembly.GetExecutingAssembly().GetName().Name
             //    + ", NAMESPACE " + Assembly.GetExecutingAssembly().EntryPoint.DeclaringType.Namespace));
 
 
             Customer customer = new Customer();
-            MyLogger.Log.Debug("PrintCustomerInfo method call");
+            //MyLogger.Log.Debug("PrintCustomerInfo method call");
             customer.PrintCustomerInfo();
 
             if (customer.Item == "Bike" || customer.Item == "bike")
             {
-                MyLogger.Log.Debug("Bike class call");
+                //MyLogger.Log.Debug("Bike class call");
                 Bike bike = new Bike();
                 bike.PrintBikeInfo();
                 if (bike.Type == "Mountain bike" || bike.Type == "mountain bike")
                 {
-                    MyLogger.Log.Debug("MountainBike class call");
+                    //MyLogger.Log.Debug("MountainBike class call");
                     MountainBike mountain = new MountainBike();
                     mountain.PrintBikeInfo();
                 }
                 if (bike.Type == "Road bike" || bike.Type == "road bike")
                 {
-                    MyLogger.Log.Debug("RoadBike class call");
+                    //MyLogger.Log.Debug("RoadBike class call");
                     RoadBike roadBike = new RoadBike();
                     roadBike.PrintBikeInfo();
                 }
                 if (bike.Type == "City bike" || bike.Type == "city bike")
                 {
-                    MyLogger.Log.Debug("CityBike class call");
+                    //MyLogger.Log.Debug("CityBike class call");
                     CityBike cityBike = new CityBike();
                     cityBike.PrintBikeInfo();
                 }
                 if (bike.Type == "Kids bike" || bike.Type == "kids bike")
                 {
-                    MyLogger.Log.Debug("KidsBike class call");
+                    //MyLogger.Log.Debug("KidsBike class call");
                     KidsBike kidsBike = new KidsBike();
                     kidsBike.PrintBikeInfo();
                 }
 
-                MyLogger.Log.Debug(" ");
+                //MyLogger.Log.Debug(" ");
                 Console.WriteLine("We'll help you choose a bike according to your parameters");
                 Console.WriteLine("Enter your height:");
                 float height = Convert.ToSingle(Console.ReadLine());
@@ -122,17 +127,18 @@ namespace Project.Bike_Components
                 }
                 catch (Exception ex)
                 {
-                    MyLogger.Log.Error($"{ex.Message}");
+                    //MyLogger.Log.Error($"{ex.Message}");
                     Console.WriteLine($"{ex.Message}");
+                    throw new Exception("Sorry, but we don't have a bike to yours parameters.");
                 }
             }
 
-            if (customer.Item == "Parts")
+            if (customer.Item == "Parts for bike" || customer.Item == "parts for bike")
             {
                 Parts parts = new Parts();
                 parts.PrintThingsInfo();
             }
-            if (customer.Item == "Accessories")
+            if (customer.Item == "Accessories" || customer.Item == "accessories")
             {
                 Accessories accessories = new Accessories();
                 accessories.PrintThingsInfo();
@@ -141,7 +147,7 @@ namespace Project.Bike_Components
 
 
 
-            //Logger.Log.Info("PROGRAMM_COMPLETED_SUCCESSFULLY");
+            //MyLogger.Log.Info("PROGRAMM_COMPLETED_SUCCESSFULLY");
             Console.ReadLine();
         }
     }

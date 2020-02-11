@@ -12,13 +12,13 @@ namespace Project.Bike_Components
         public string Name { get; set; }
 
         [JsonProperty("model")]
-        public string Model { get; set; }
+        public string[] Model { get; set; }
 
         public override void PrintBikeInfo()
         {
             Console.WriteLine("All right!");
             Console.WriteLine("You can see the product that interests you in this list:");
-            var obj = JsonConvert.DeserializeObject(File.ReadAllText(".json"));
+            var obj = JsonConvert.DeserializeObject(File.ReadAllText("CB.json"));
             Console.WriteLine(obj);
         }
     }

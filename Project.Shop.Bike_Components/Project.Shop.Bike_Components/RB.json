@@ -1,0 +1,22 @@
+{
+  "1": {
+    "name": "OPEN",
+    "model": "WI.DE Turq"
+  },
+  "2": {
+    "name": "Bombtrack",
+    "model": [ "Hook EXT", "Hook-2" ]
+  },
+  "3": {
+    "name": "Fokus",
+    "model": [ "Mares 6.9", "Paralane 6.9" , "Izalco max"]
+  },
+  "4": {
+    "name": "3T",
+    "model": [ "Exploro Pro", "Exploro 1" ]
+  },
+  "5": {
+    "name": "Scott",
+    "model": [ "Foil 10", "Addict 20", "Addict RC 30" ]
+  }
+}
