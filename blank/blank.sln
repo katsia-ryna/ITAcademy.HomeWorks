@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 
+
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.02", "HW.02\HW.02.csproj", "{95B58FB7-3CF5-4BC1-9FFA-E855B49729AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{F23AFE43-03D9-4C18-8D56-0F5343D8F5C6}"
@@ -30,7 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyOne", "AssemblyOne\AssemblyOne.csproj", "{07905B34-8109-43AC-81A7-AD4921492363}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyTwo", "AssemblyTwo\AssemblyTwo.csproj", "{B279B900-B09E-4178-A4A9-10EB291BA2C6}"
-
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW09.Task1", "HW09.Task1\HW09.Task1.csproj", "{7C3D428A-4196-43D3-982C-59DFD460CA99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +41,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+
 
 		{95B58FB7-3CF5-4BC1-9FFA-E855B49729AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95B58FB7-3CF5-4BC1-9FFA-E855B49729AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
@@ -86,6 +90,11 @@ Global
 		{B279B900-B09E-4178-A4A9-10EB291BA2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B279B900-B09E-4178-A4A9-10EB291BA2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B279B900-B09E-4178-A4A9-10EB291BA2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+    
+    {7C3D428A-4196-43D3-982C-59DFD460CA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3D428A-4196-43D3-982C-59DFD460CA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3D428A-4196-43D3-982C-59DFD460CA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3D428A-4196-43D3-982C-59DFD460CA99}.Release|Any CPU.Build.0 = Release|Any CPU
 
 
 	EndGlobalSection
