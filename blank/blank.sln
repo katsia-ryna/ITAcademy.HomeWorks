@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.02", "HW.02\HW.02.csproj", "{95B58FB7-3CF5-4BC1-9FFA-E855B49729AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "image", "image", "{F23AFE43-03D9-4C18-8D56-0F5343D8F5C6}"
@@ -43,6 +44,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW10.Task4", "HW10.Task4\HW
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW10.Task5", "HW10.Task5\HW10.Task5.csproj", "{C2D35D52-04B2-438E-A3F7-609733126D06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW11.Task1", "HW11.Task1\HW11.Task1.csproj", "{FF1F4214-F407-4224-A22C-7EA84F3051CA}"
+EndProject
+
 
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +129,12 @@ Global
 		{C2D35D52-04B2-438E-A3F7-609733126D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2D35D52-04B2-438E-A3F7-609733126D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2D35D52-04B2-438E-A3F7-609733126D06}.Release|Any CPU.Build.0 = Release|Any CPU
+    
+    {FF1F4214-F407-4224-A22C-7EA84F3051CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1F4214-F407-4224-A22C-7EA84F3051CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1F4214-F407-4224-A22C-7EA84F3051CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1F4214-F407-4224-A22C-7EA84F3051CA}.Release|Any CPU.Build.0 = Release|Any CPU
+
 
 
 
