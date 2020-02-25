@@ -24,19 +24,22 @@ namespace MyLogger
             sw.WriteLine(infoStr);
             sw.Close();*/
 
-            string pathToLog = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
+            string pathToLog = Path.Combine(Environment.CurrentDirectory, @"Log");
             if (!Directory.Exists(pathToLog))
             {
                 Directory.CreateDirectory(pathToLog);
             }
 
-            var count = 0;
-            string fileName = Path.Combine(pathToLog, String.Format("log {0:yyyy.mm.dd}_[{1}].txt",
-                                                     DateTime.Now, Convert.ToString(count += 1)));
-            string fullText = String.Format("[{0:dd.mm.yyyy hh:mm:ss.fff}] [{1}.{2}()] \r\n", 
-                            DateTime.Now, Assembly.GetExecutingAssembly().EntryPoint.DeclaringType.Namespace,
-                            Assembly.GetExecutingAssembly().GetName().Name, infoStr);
-            File.AppendAllText(fileName, fullText, Encoding.GetEncoding("utf-8"));
+            var counterLog = 0;
+            DateTime now = DateTime.Now;
+            pathToLog = Path.Combine(Environment.CurrentDirectory, $@"Log\log{now.ToString("yyyyMMdd")}_[{counterLog}].txt");
+            
+            //string fileName = Path.Combine(pathToLog, String.Format("log {0:yyyy.mm.dd}_[{1}].txt",
+            //                                         DateTime.Now, Convert.ToString(counterLog += 1)));
+            //string fullText = String.Format("[{0:dd.mm.yyyy hh:mm:ss.fff}] [{1}.{2}()] \r\n", 
+            //                DateTime.Now, Assembly.GetExecutingAssembly().EntryPoint.DeclaringType.Namespace,
+            //                Assembly.GetExecutingAssembly().GetName().Name, infoStr);
+            //File.AppendAllText(fileName, fullText, Encoding.GetEncoding("utf-8"));
 
 
         }
