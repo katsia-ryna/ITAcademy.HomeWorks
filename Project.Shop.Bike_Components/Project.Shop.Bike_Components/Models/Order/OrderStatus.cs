@@ -1,8 +1,10 @@
-﻿namespace Project.Bike_Components
+﻿namespace Project.Shop.Bike_Components
 {
     public enum OrderStatus
     {
-        Shipping,
-        Recieved
+        Created,
+        ReadyToDispatch,
+        Shipped,
+        Received
     }
 }

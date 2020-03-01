@@ -5,4 +5,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Project.Shop.Bike_Components">
+      <HintPath>..\..\Project.Shop.Bike_Components\Project.Shop.Bike_Components\bin\Debug\netcoreapp3.0\Project.Shop.Bike_Components.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

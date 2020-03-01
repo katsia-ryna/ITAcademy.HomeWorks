@@ -4,7 +4,7 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace Project.Bike_Components
+namespace Project.Shop.Bike_Components
 {
 
     public class CustomerOrder
@@ -21,12 +21,22 @@ namespace Project.Bike_Components
 
         public OrderStatus OrderStatus { get; set; } 
 
-        public CustomerOrder(string address, int quantity,Bike  bike, Customer customer)
+        public CustomerOrder(Bike bike, Customer customer, string address, int quantity)
         {
             Address = address;
             Quantity = quantity;
             Bike = bike;
             Customer = customer;
+        }
+        public void PrintOrderInfo()
+        {
+            Console.WriteLine("Order info:");
+            Console.WriteLine($"OrderId={OrderId}");
+            Console.WriteLine($"Address={Address}");
+            Console.WriteLine("Bike:");
+            Bike.PrintBikeInfo();
+            Console.WriteLine("Customer:");
+            Customer.PrintCustomerInfo();
         }
     }
 }

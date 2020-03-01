@@ -4,7 +4,7 @@ using System.Text;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace Project.Bike_Components
+namespace Project.Shop.Bike_Components
 {
     class CityBike : Bike
     {

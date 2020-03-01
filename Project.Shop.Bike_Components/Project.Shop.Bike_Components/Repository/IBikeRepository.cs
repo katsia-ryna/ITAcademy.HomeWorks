@@ -1,9 +1,8 @@
-﻿using Project.Bike_Components;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project.Shop.Bike_Components.Repository
+namespace Project.Shop.Bike_Components
 {
     interface IBikeRepository:IRepository<Bike>
     {

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Project.Bike_Components
+namespace Project.Shop.Bike_Components
 {
     public class Bike
     {

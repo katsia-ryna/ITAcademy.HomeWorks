@@ -1,4 +1,4 @@
-﻿namespace Project.Bike_Components
+﻿namespace Project.Shop.Bike_Components
 {
     public enum FrameSize
     {

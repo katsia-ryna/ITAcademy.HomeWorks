@@ -1,8 +1,8 @@
-﻿using Project.Bike_Components;
+﻿using Project.Shop.Bike_Components;
 
-namespace Project.Shop.Bike_Components.Repository
+namespace Project.Shop.Bike_Components
 {
-    interface IOrderRepository : IRepository<CustomerOrder>
+    public interface IOrderRepository : IRepository<CustomerOrder>
     {
     }
 }

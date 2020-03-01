@@ -10,15 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="MyLogger">
-      <HintPath>..\..\MyLogger\MyLogger\bin\Debug\netcoreapp3.0\MyLogger.dll</HintPath>
-    </Reference>
-    <Reference Include="Shop.Bike_Components.Admin">
-      <HintPath>..\..\Shop.Bike_Components.Admin\Shop.Bike_Components.Admin\bin\Debug\netcoreapp3.0\Shop.Bike_Components.Admin.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="bikes.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

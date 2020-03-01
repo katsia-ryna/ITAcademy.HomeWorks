@@ -1,11 +1,10 @@
 ﻿using Newtonsoft.Json;
-using Project.Bike_Components;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace Project.Shop.Bike_Components.Repository
+namespace Project.Shop.Bike_Components
 {
     class BikeRepository : IBikeRepository
     {
