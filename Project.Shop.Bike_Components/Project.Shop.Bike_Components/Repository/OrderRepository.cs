@@ -14,13 +14,13 @@ namespace Project.Shop.Bike_Components
         public OrderRepository(string fileName)
         {
             _fileName = fileName;
-            //using (var fileStream = new FileStream(_fileName, FileMode.OpenOrCreate))
-            //{
-            //    var sr = new StreamReader(fileStream);
-            //    var strItems = sr.ReadToEnd();
-            //    _item = JsonConvert.DeserializeObject<List< CustomerOrder>>(File.ReadAllText(_fileName));
-            //}
-            _item = JsonConvert.DeserializeObject<List<CustomerOrder>>(File.ReadAllText("orders.json"));
+            
+            using(FileStream fileStream=new FileStream(_fileName, FileMode.OpenOrCreate))
+            {
+                StreamReader sr = new StreamReader(fileStream);
+                var strItems = sr.ReadToEnd();
+                _item = JsonConvert.DeserializeObject<List<CustomerOrder>>(strItems) ?? new List<CustomerOrder>();
+            }
         }
 
         public void Create(CustomerOrder entity)
@@ -44,6 +44,7 @@ namespace Project.Shop.Bike_Components
 
         public void Delete(int id)
         {
+            Logger.Log.Info("Remove order by id");
             var order = _item.FirstOrDefault(x => x.OrderId == id);
             if (order!=null)
             {
@@ -53,11 +54,13 @@ namespace Project.Shop.Bike_Components
 
         public IEnumerable<CustomerOrder> GetAll()
         {
-            return JsonConvert.DeserializeObject<List<CustomerOrder>>(File.ReadAllText("orders.json"));
+            Logger.Log.Debug("Read file orders.json");
+            return JsonConvert.DeserializeObject<List<CustomerOrder>>(File.ReadAllText(_fileName));
         }
 
         public CustomerOrder GetById(int id)
         {
+            Logger.Log.Info("Print bike by id");
             return _item.FirstOrDefault(x=>x.OrderId==id) ;
         }
 
