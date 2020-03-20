@@ -1,0 +1,79 @@
+[
+  {
+    "bike-id": 1,
+    "model": "Scott",
+    "type": "Mountain bike",
+    "wheel-size": 1,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 2,
+    "model": "Trek",
+    "type": "Mountain bike",
+    "wheel-size": 1,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 3,
+    "model": "Bulls",
+    "type": "Mountain bike",
+    "wheel-size": 1,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 4,
+    "model": "Specialize",
+    "type": "Mountain bike",
+    "wheel-size":  0,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 5,
+    "model": "Vortrieb",
+    "type": "City bike",
+    "wheel-size": 1,
+    "frame-size": 3
+  },
+  {
+    "bike-id": 6,
+    "model": "Bombtrack",
+    "type": "City bike",
+    "wheel-size": 3,
+    "frame-size": 4
+  },
+  {
+    "bike-id": 7,
+    "model": "Surly",
+    "type": "City bike",
+    "wheel-size": 1,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 8,
+    "model": "Bear",
+    "type": "City bike",
+    "wheel-size": 0,
+    "frame-size": 2
+  },
+  {
+    "bike-id": 9,
+    "model": "GIANT",
+    "type": "City bike",
+    "wheel-size": 2,
+    "frame-size":3
+  },
+  {
+    "bike-id": 10,
+    "model": "OPEN",
+    "type": "Road bike",
+    "wheel-size":2,
+    "frame-size":3
+  },
+  {
+    "bike-id": 11,
+    "model": "Fokus",
+    "type": "Road bike",
+    "wheel-size": 2,
+    "frame-size": 4
+  }
+]
